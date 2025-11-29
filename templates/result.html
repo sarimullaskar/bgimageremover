@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Background Removed Successfully</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 40px;
+            text-align: center;
+        }
+
+        .preview {
+            width: 180px;
+            margin-top: 15px;
+            border: 1px solid #ccc;
+            padding: 5px;
+        }
+
+        .download-btn {
+            display: inline-block;
+            background: #28a745;
+            color: white;
+            padding: 10px 18px;
+            text-decoration: none;
+            border-radius: 5px;
+            margin-top: 15px;
+            font-weight: bold;
+        }
+
+        .home-btn{
+            display: inline-block;
+            background: #007bff;
+            color: white;
+            padding: 10px 18px;
+            text-decoration: none;
+            border-radius: 5px;
+            margin-top: 15px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+    <h2>Background Removed Successfully!</h2>
+
+    <img src="{{ url_for('static', filename=output_image) }}" class="preview">
+
+    <br><br>
+
+    <a class="download-btn" href="{{ url_for('download_file', filename=output_image) }}">
+        Download
+    </a>
+    <a class="home-btn" href="/">
+        Home
+    </a>
+</body>
+
+</html>
